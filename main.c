@@ -1,14 +1,7 @@
 #include <stdio.h>
-float Myfunc(){
-  float   power, result = 1;
-  float x ;
-
-    printf("Enter basenumber: ");
-    scanf("%f", &x);
-
-    printf("Enter powernumber: ");
-    scanf("%f", &power); 
-
+float Myfunc(float x , float power);
+float Myfunc(float x , float power){
+    float result = 1;
     int b = power;
     int i = 1;
     if( (b != power) || (b < 0)){
@@ -23,11 +16,19 @@ float Myfunc(){
         i+=1;    
     }
     printf("%.3f^%.0f = %.3f",x, power, result);
+    return result;
 }
 
 int main(void) {
+  float num1;
+  float num2;
+  float get;
+    printf("Enter basenumber: ");
+    scanf("%f", &num1);
 
-  Myfunc();
+    printf("Enter powernumber: ");
+    scanf("%f", &num2); 
+    get = Myfunc(num1,num2);
   
   return 0;
 }
