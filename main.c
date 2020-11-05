@@ -16,7 +16,6 @@ float Myfunc(){
       printf("Exit Program");
       return 0 ;
     }
- printf(" +++%.3f",result);
 
    while(i <= b)
     {
