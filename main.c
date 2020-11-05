@@ -1,29 +1,31 @@
 #include <stdio.h>
 float Myfunc(){
-  float  power, x, result = 1;
-  //int ;
+  float   power, result = 1;
+  float x ;
 
     printf("Enter basenumber: ");
     scanf("%f", &x);
 
     printf("Enter powernumber: ");
     scanf("%f", &power); 
-    int d = power;
+
+    int b = power;
     int i = 1;
-    if(power != d || power < 0){
+    if( (b != power) || (b < 0)){
       power = -1;
       printf("Exit Program");
       return 0 ;
     }
-   while(i <= power)
+ printf(" +++%.3f",result);
+
+   while(i <= b)
     {
-        result *= power;
-        printf("%.3f^%d = %.3f",x, power, result);
-        i++;
-        return result ;
+        result *= x;
+        i+=1;    
     }
-    printf("%.3f^%d = %.3f",x, power, result);
+    printf("%.3f^%.0f = %.3f",x, power, result);
 }
+
 int main(void) {
 
   Myfunc();
